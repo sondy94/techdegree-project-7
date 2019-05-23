@@ -96,10 +96,25 @@ select {
 	.message-user { border-right: 1px solid #dbdbdb }
 }
 
+.container {
+  
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main";
+}
+
+
 /* Header
 	 ========================================================================== */
 
 header {
+	grid-area: header;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -186,6 +201,7 @@ header {
 	 ========================================================================== */
 
 nav {
+	grid-area: nav;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -253,6 +269,11 @@ nav .option {
 
 /* Main
 	 ========================================================================== */
+
+main { 
+	grid-area: main;
+}
+	
 
 .main-top {
 	border-bottom: 1px solid #dbdbdb;
